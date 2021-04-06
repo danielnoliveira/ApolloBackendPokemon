@@ -1,0 +1,20 @@
+{
+  "name": "ApolloPokemon",
+  "version": "1.0.0",
+  "description": "Backend para uma api de pokemons feita com Apollo e GraphQL ",
+  "main": "index.js",
+  "author": "Daniel Nogueira de Oliveira",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.22.2",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.5.0",
+    "mongoose": "^5.12.3"
+  },
+  "devDependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
