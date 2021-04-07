@@ -1,4 +1,5 @@
 const Pokemon = require('../Database/models/Pokemon');
+const Trainer = require('../Database/models/Trainer');
 
 const PokemonResolver = {
     Query: {
@@ -20,6 +21,17 @@ const PokemonResolver = {
                 params.abilities = abilities;
             }
             return Pokemon.find(params).limit(10);
+        },
+        trainer(_,{name}){
+            const params = {};
+            params.name = name;
+            return Trainer.findOne(params).populate('pokemons');
+        }
+    },
+    Mutation: {
+        createTrainer(_, {trainer}){
+            const newTrainer = new Trainer(trainer);
+            return newTrainer.save();
         }
     }
 }
