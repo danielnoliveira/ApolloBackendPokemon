@@ -2,7 +2,8 @@ const {gql} = require('apollo-server');
 
 const types = gql`
     type Pokemon {
-        abilities: [String],
+        _id: String
+        abilities: [String]
         against_bug: String
         against_dark: String
         against_dragon: String
