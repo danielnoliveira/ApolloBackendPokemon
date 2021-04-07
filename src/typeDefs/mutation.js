@@ -7,10 +7,7 @@ const mutation = gql`
 
     input TrainerInput {
         name: String
-        pokemons: [PokemonInput]
-    }
-    input PokemonInput {
-        name: String
+        pokemons: [String]
     }
 `;
 
